@@ -21,3 +21,5 @@ PyQt5 == 5.14.2
 numpy == 1.18.1
 
 tensorflow == 2.0.0
+
+scikit-learn == 0.22.1
