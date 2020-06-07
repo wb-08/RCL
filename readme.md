@@ -23,3 +23,7 @@ numpy == 1.18.1
 tensorflow == 2.0.0
 
 scikit-learn == 0.22.1
+
+opencv-contrib-python == 3.4.2.17
+
+opencv-python == 3.4.2.17
