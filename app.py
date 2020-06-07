@@ -31,7 +31,7 @@ class Window(QMainWindow):
         self.line = QLineEdit(self)
 
         self.line.move(360, 168)
-        self.line.resize(80, 33)
+        self.line.resize(99, 42)
         self.nameLabel.move(290, 170)
 
         prediction_button = QPushButton('RECOGNITION', self)
@@ -48,141 +48,10 @@ class Window(QMainWindow):
         self.setWindowTitle(title)
         self.setGeometry(top, left, width, height)
 
-    def print_letter(self, result):
-        if result == 1:
-            self.line.setText('А')
-            return 'А'
-
-        elif result == 2:
-            self.line.setText('Б')
-            return 'Б'
-
-        elif result == 3:
-            self.line.setText('В')
-            return 'В'
-
-        elif result == 4:
-            self.line.setText('Г')
-            return 'Г'
-
-        elif result == 5:
-            self.line.setText('Д')
-            return 'Д'
-
-        elif result == 6:
-            self.line.setText('Е')
-            return 'Е'
-
-        elif result == 7:
-            self.line.setText('Ж')
-            return 'Ж'
-
-        elif result == 0:
-            self.line.setText('Ё')
-            return 'Ё'
-
-        elif result == 8:
-            self.line.setText('З')
-            return 'З'
-
-        elif result == 9:
-            self.line.setText('И')
-            return 'И'
-
-        elif result == 10:
-            self.line.setText('Й')
-            return 'Й'
-
-        elif result == 11:
-            self.line.setText('К')
-            return 'К'
-
-        elif result == 12:
-            self.line.setText('Л')
-            return 'Л'
-
-        elif result == 13:
-            self.line.setText('М')
-            return 'М'
-
-        elif result == 14:
-            self.line.setText('Н')
-            return 'Н'
-
-        elif result == 15:
-            self.line.setText('О')
-            return 'О'
-
-        elif result == 16:
-            self.line.setText('П')
-            return 'П'
-
-        elif result == 17:
-            self.line.setText('Р')
-            return 'Р'
-
-        elif result == 18:
-            self.line.setText('С')
-            return 'С'
-
-        elif result == 19:
-            self.line.setText('Т')
-            return 'Т'
-
-        elif result == 20:
-            self.line.setText('У')
-            return 'У'
-
-        elif result == 21:
-            self.line.setText('Ф')
-            return 'Ф'
-
-        elif result == 22:
-            self.line.setText('Х')
-            return 'Х'
-
-        elif result == 23:
-            self.line.setText('Ц')
-            return 'Ц'
-
-        elif result == 24:
-            self.line.setText('Ч')
-            return 'Ч'
-
-        elif result == 25:
-            self.line.setText('Ш')
-            return 'Ш'
-
-        elif result == 26:
-            self.line.setText('Щ')
-            return 'Щ'
-
-        elif result == 27:
-            self.line.setText('Ъ')
-            return 'Ъ'
-
-        elif result == 28:
-            self.line.setText('Ы')
-            return 'Ы'
-
-        elif result == 29:
-            self.line.setText('Ь')
-            return 'Ь'
-
-        elif result == 30:
-            self.line.setText('Э')
-            return 'Э'
-
-        elif result == 31:
-            self.line.setText('Ю')
-            return 'Ю'
-
-        elif result == 32:
-            self.line.setText('Я')
-            return 'Я'
-
-        else:
-            print('ERROR!')
+    def print_letter(self,result):
+        letters = "ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+        self.line.setText(letters[result])
+        return letters[result]
 
     def predicting(self):
         image = keras.preprocessing.image
