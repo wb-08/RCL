@@ -27,3 +27,9 @@ scikit-learn == 0.22.1
 opencv-contrib-python == 3.4.2.17
 
 opencv-python == 3.4.2.17
+
+
+article
+---------------------------------
+
+https://habr.com/ru/post/505616/
