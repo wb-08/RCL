@@ -4,7 +4,7 @@ Recognition_Cyrillic_Letter(RCL)
 Usage
 --------------------------
 
-Run app.py
+python3 app.py
 
 Result
 ---------------------------------
